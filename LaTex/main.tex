@@ -1,0 +1,92 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{algpseudocode} %algorithmic
+
+
+\title{Clase de LaTex}
+\author{Nicolas Lucero xd}
+
+\begin{document}
+\maketitle
+
+\section*{Ejercicio 1}
+\begin{center}
+    ¡Llegaron los resultados de la carrera!
+\end{center}
+
+\begin{enumerate}
+    \item En primer lugar, y recibiendo un premio de \$0 llega Alice.
+    \item En segundo lugar, a nada de ganar el \#1 lugar , llega Bob.
+    \item Por último, pero incrementando su participación en carreras desde la última temporada en un 120 \%, llega Charlie.
+    \item \dots
+\end{enumerate}
+
+\section*{Prueba de ecuación}
+Las raices de una ecuación cuadrática son
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}
+{2a}
+\end{equation}
+donde $a$, $b$ y $c$ son \ldots
+
+\section*{Prueba de codigo}
+\begin{lstlisting}[language=c]
+int sumar(int x, int y) {
+return x + y;
+}
+\end{lstlisting}
+
+\section*{Ejercicio 2}
+(\dots) teniendo en cuenta esto, podemos definir el \textbf{teorema de Bayes}
+como:
+\begin{equation}
+    P(A|B)=\frac{P(A|B)P(A)}{P(B)}
+\end{equation}
+Para utilizar esto, queremos primero implementar la función
+\texttt{probarCondicional} de la siguiente manera
+
+\begin{lstlisting}[language=python]
+probaCondicional(A,B):
+    proba = proba (interseccion(A,B))
+    denominador = proba(B)
+    return division(numerador,denominador)
+\end{lstlisting}
+
+
+%\section*{Imagen}
+%\begin{figure}
+%    \centering
+%    \includegraphics{./imageUBA.png}
+%    \caption{Universidad de Buenos Aires}
+%    \label{fig:placeholder}
+%\end{figure}
+
+
+
+\section*{Ejercicio 3}
+
+\begin{algorithmic}
+\Function{sumartuplas}{Tuplas}
+    \State $suma \leftarrow (0,0)$
+    \If{$tupla \neq \{\}$}
+        \For {$i = 1,\dots,|Tuplas|$}
+            \State $suma_1 \leftarrow tupla[i]_1$
+            \State $suma_2 \leftarrow tupla[i]_2$
+        \EndFor
+    \EndIf
+    \State \Return $suma$
+\EndFunction
+\end{algorithmic}
+
+\end{document}
